@@ -14,6 +14,7 @@ export class TodoService {
     { id: 2, title: 'Develop Todo App', completed: false },
   ];
 
+  
   getTodo():Observable<Todo[]>{
     return of(this.todos);
   }

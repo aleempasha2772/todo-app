@@ -1,1 +1,7 @@
-<p>add-todo works!</p>
+<h2>Add Todo</h2>
+
+<form (ngSubmit)="addTodo()">
+    <label for="title">Title</label>
+    <input id="title" [(ngModel)]="title" name="title" required>
+    <button type="submit">Add Todo</button>
+</form>

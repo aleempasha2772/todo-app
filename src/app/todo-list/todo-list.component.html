@@ -1,1 +1,11 @@
-<p>todo-list works!</p>
+<h2>Todo List</h2>
+<ul>
+    <li *ngFor = "let todo of todos" (click) = "toggleCompletion(todo)">
+        <span [class.completed]="todo.completed">
+            {{todo.title}}
+        </span>
+        <button (click)="toggleCompletion(todo)">
+            {{ todo.completed ? 'Undo' : 'Complete' }}
+          </button>
+    </li>
+</ul>
